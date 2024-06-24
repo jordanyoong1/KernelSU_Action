@@ -180,18 +180,6 @@ Enable the cache to make the second kernel compile faster. It can reduce the tim
 
 Upload DTBO. Some devices require it.
 
-### Build Boot IMG
-
-> Added from previous workflows, view historical commits
-
-Build boot.img, and you need to provide a `Source boot image`.
-
-### Source Boot Image
-
-As the name suggests, it provides a boot image source system that can boot normally and requires a direct chain, preferably from the same kernel source and AOSP device tree as your current system. Ramdisk contains the partition table and init, without which the compiled image will not boot up properly.
-
-For example: https://raw.githubusercontent.com/xiaoleGun/KernelSU_action/main/boot/boot-wayne-from-Miku-UI-latest.img
-
 ## Thanks
 
 - [AnyKernel3](https://github.com/osm0sis/AnyKernel3)

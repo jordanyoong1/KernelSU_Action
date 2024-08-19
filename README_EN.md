@@ -156,6 +156,10 @@ See also: [Intergrate for non-GKI devices](https://kernelsu.org/guide/how-to-int
 
 To clean unnecessary packages and free up more disk space.If you need these packages, please disable this option.
 
+### Extra env
+
+You can configure more environments before compiling the kernel. The workflow copies all files/folders in the env folder to the kernel root as is.
+
 ### AnyKernel3
 
 #### Use custom AnyKernel3

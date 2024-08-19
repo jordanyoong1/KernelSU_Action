@@ -54,6 +54,7 @@ jobs:
             KSU_EXPECTED_SIZE
             KSU_EXPECTED_HASH
             REMOVE_UNUSED_PACKAGES
+            EXTRA_ENV
         )
 
         for CONFIG in "${CONFIG_LIST[@]}"; do
@@ -192,6 +193,9 @@ jobs:
     - name: Setup Configuration for Kernel
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
+        if [ ${{ env.EXTRA_ENV }} = true ]; then
+            cp -r $GITHUB_WORKSPACE/env/* .
+        fi
         if [ ${{ env.APPLY_KSU_PATCH }} = true ]; then
             bash $GITHUB_WORKSPACE/patches/patches.sh
             if grep -q "CONFIG_KSU" arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}; then

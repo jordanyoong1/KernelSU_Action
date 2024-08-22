@@ -1,6 +1,6 @@
-**中文** | [English](README_EN.md)
-
 # KernelSU Action
+
+**中文** | [English](README_EN.md)
 
 用于 Non-GKI Kernel 的 Action，具有一定的普遍性，需要了解内核及 Android 的相关知识得以运用。
 
@@ -18,7 +18,6 @@
 ## 使用
 
 > 所有 config.env 内的变量均只判断`true`
-
 > 编译成功后，会在`Action`上传 AnyKernel3，已经关闭设备检查，请在 Twrp 刷入。
 
 Fork 本仓库到你的储存库然后按照以下内容编辑 config.env，之后点击`Star`或`Action`，在左侧可看见`Build Kernel`选项，点击选项会看见右边的大对话框的上面会有`Run workflows`点击它会启动构建。
@@ -27,7 +26,7 @@ Fork 本仓库到你的储存库然后按照以下内容编辑 config.env，之�
 
 修改为你的内核仓库地址
 
-例如: https://github.com/Diva-Room/Miku_kernel_xiaomi_wayne
+例如: <https://github.com/Diva-Room/Miku_kernel_xiaomi_wayne>
 
 ### Kernel Source Branch
 
@@ -78,7 +77,7 @@ Fork 本仓库到你的储存库然后按照以下内容编辑 config.env，之�
 | master-kernel-build-2021 |
 | master-kernel-build-2022 |
 
-或者其它分支，请根据自己的需求在 https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 中寻找
+或者其它分支，请根据自己的需求在 <https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86> 中寻找
 
 #### Clang version
 
@@ -87,11 +86,10 @@ Fork 本仓库到你的储存库然后按照以下内容编辑 config.env，之�
 | ---------- | ----------------- | --------------- |
 | 12.0.5 | Android S | r416183b |
 | 14.0.6 | Android T | r450784d |
-| 14.0.7 |               | r450784e |
-| 15.0.1 |               | r458507 |
-| 17.0.1 |               | r487747b |
+| 14.0.7 |           | r450784e |
+| 15.0.1 |           | r458507  |
+| 17.0.1 |           | r487747b |
 | 17.0.2 | Android U | r487747c |
-
 
 一般 Clang12 就能通过大部分 4.14 及以上的内核的编译
 我自己的 MI 6X 4.19 使用的是 r450784d

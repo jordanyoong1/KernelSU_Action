@@ -1,5 +1,7 @@
 # KernelSU Action
 
+[中文](README.md) | **English**
+
 This action is for Non-GKI Kernels and has some universality and requires knowledge of the kernel and Android.
 
 ## Warning :warning::warning::warning:
@@ -16,7 +18,6 @@ If you are not the author of the Kernel, and are using someone else's labor to b
 ## Usage
 
 > All variables in the `config.env` file are only checked for `true`.
-
 > Once the compilation is successful, AnyKernel3 will be uploaded in the `Action` and the device check has been disabled. Please flash it in TWRP.
 
 Fork this repository to your storage account and edit the `config.env` file with the following content. Afterward, click `Star` or `Action`. On the left side, you can see the `Build Kernel` option. Click on it, and you will find the `Run workflows` option above the dialog. Click on it to start the build.
@@ -25,7 +26,7 @@ Fork this repository to your storage account and edit the `config.env` file with
 
 Change this to your Kernel repository address.
 
-For example - https://github.com/Diva-Room/Miku_kernel_xiaomi_wayne
+For example - <https://github.com/Diva-Room/Miku_kernel_xiaomi_wayne>
 
 ### Kernel Source Branch
 
@@ -76,7 +77,7 @@ Due to [#23](https://github.com/xiaoleGun/KernelSU_Action/issues/23), we provide
 | master-kernel-build-2021 |
 | master-kernel-build-2022 |
 
-Or other branches, please search for them according to your own needs at https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86.
+Or other branches, please search for them according to your own needs at <https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86>.
 
 #### Clang Version
 

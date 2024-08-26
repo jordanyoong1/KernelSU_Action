@@ -122,6 +122,10 @@ LTO is used to optimize the kernel but sometimes causes errors.
 
 Enable KernelSU for troubleshooting kernel failures or compiling the kernel separately.
 
+#### KernelSU repo
+
+You can use a customized KernelSU repository in the format: owner/repository name. (e.g. [tiann/KernelSU](https://github.com/tiann/KernelSU))
+
 #### KernelSU Branch or Tag
 
 [KernelSU 1.0 no longer supports non-GKI kernels](https://github.com/tiann/KernelSU/issues/1705). The last supported version is [v0.9.5](https://github.com/tiann/KernelSU/tree/v0.9.5), please make sure to use the correct branch.

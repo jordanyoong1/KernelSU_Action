@@ -119,6 +119,10 @@ Fork 本仓库到你的储存库然后按照以下内容编辑 config.env，之�
 
 启用 KernelSU，用于排查内核故障或单独编译内核
 
+#### KernelSU repo
+
+你可以使用自定义的 KernelSU 仓库，格式为：所有者/仓库名称。 (比如：[tiann/KernelSU](https://github.com/tiann/KernelSU))
+
 #### KernelSU Branch or Tag
 
 [KernelSU 1.0 已经不再支持非 GKI 内核](https://github.com/tiann/KernelSU/issues/1705)，最后的支持版本为 [v0.9.5](https://github.com/tiann/KernelSU/tree/v0.9.5)，请注意使用正确的分支

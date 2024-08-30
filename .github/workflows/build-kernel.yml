@@ -224,6 +224,9 @@ jobs:
         if [ ${{ env.DISABLE_CC_WERROR }} = true ]; then
             echo "CONFIG_CC_WERROR=n" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
         fi
+        if [ ${{ env.ADD_LOCALVERSION_TO_FILENAME }} = true ]; then
+            echo "UPLOADNAME=${{ env.UPLOADNAME }}$(sed -n 's/^.*CONFIG_LOCALVERSION="\([^"]*\)".*$/\1/p' arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }})" >> $GITHUB_ENV
+        fi
 
     - name: Setup ccache
       if: env.ENABLE_CCACHE == 'true'

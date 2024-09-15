@@ -187,7 +187,14 @@ jobs:
       if: env.ENABLE_KERNELSU == 'true'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
-        curl -LSs "https://raw.githubusercontent.com/${{ env.KERNELSU_REPO }}/main/kernel/setup.sh" | sed "s:tiann/KernelSU:${{ env.KERNELSU_REPO }}:" | bash -s ${{ env.KERNELSU_TAG }}
+        if git submodule status KernelSU; then
+            cd KernelSU || exit 1
+            git fetch https://github.com/${{ env.KERNELSU_REPO }} ${{ env.KERNELSU_TAG }}
+            git checkout FETCH_HEAD
+            cd -
+        else
+            curl -LSs "https://raw.githubusercontent.com/${{ env.KERNELSU_REPO }}/main/kernel/setup.sh" | sed "s:tiann/KernelSU:${{ env.KERNELSU_REPO }}:" | bash -s ${{ env.KERNELSU_TAG }}
+        fi
         KSU_VERSION=$(cd KernelSU && expr $(/usr/bin/git rev-list --count HEAD) + 10200)
         echo "UPLOADNAME=-KernelSU_$KSU_VERSION" >> $GITHUB_ENV
 

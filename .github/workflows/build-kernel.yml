@@ -211,6 +211,7 @@ jobs:
             git checkout FETCH_HEAD
             cd -
         else
+            rm -rf drivers/kernelsu
             curl -LSs "https://raw.githubusercontent.com/${{ env.KERNELSU_REPO }}/main/kernel/setup.sh" | sed "s:tiann/KernelSU:${{ env.KERNELSU_REPO }}:" | bash -s ${{ env.KERNELSU_TAG }}
         fi
         KSU_VERSION=$(cd KernelSU && expr $(/usr/bin/git rev-list --count HEAD) + 10200)
